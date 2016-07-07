@@ -1,3 +1,5 @@
+#Spark base Container
+
 FROM ubuntu:16.04
 MAINTAINER C.J. Woodley
 RUN apt-get update
