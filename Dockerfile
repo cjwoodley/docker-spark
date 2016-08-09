@@ -15,3 +15,7 @@ RUN sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" >> /etc/a
     apt-get -y install r-base r-base-dev
 RUN pip install jupyter
 #ENTRYPOINT ["/opt/spark/spark-2.0.0-bin-hadoop2.6/bin/spark-shell",  "local[*]"]
+
+RUN mkdir /opt/zeppelin/
+RUN wget http://mirrors.ocf.berkeley.edu/apache/zeppelin/zeppelin-0.6.0/zeppelin-0.6.0-bin-all.tgz -P /opt/zeppelin && \
+    tar -zxf /opt/zeppelin/*.tgz -C /opt/zeppelin
